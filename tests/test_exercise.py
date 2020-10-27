@@ -3,7 +3,7 @@ import os
 
 def test_exercise(capsys):
     os.chdir('src')
-    from src.exercise import read_records_from_file #had to change this import
+    from exercise import read_records_from_file #had to change this import
     file = "data.txt"
     records = read_records_from_file(file)
 
