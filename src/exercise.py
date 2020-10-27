@@ -1,4 +1,3 @@
-from src.person import Person
 import csv
 def main():
     file = input("filename:")
@@ -21,13 +20,18 @@ def read_records_from_file(file):
         for person in reader:
           name = person[0]
           age= int(person[1])
-          records.append(Person(name,age))
+          records.append(name)
         
     except:
       print("Something went wrong opening the file")
     
+    print(records)
+
     return records
 
 
 if __name__ == '__main__':
+    from person import Person
     main()
+else:
+    from src.person import Person
